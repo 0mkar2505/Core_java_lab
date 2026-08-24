@@ -23,7 +23,7 @@ public class anagram {
                     int count2 = 0;
 
                     for (int j = 0; j < length2; j++) {
-                        if (word.charAt(i) == word.charAt(j)) {
+                        if (word.charAt(i) == word2.charAt(j)) {
                             count1++;
                         }
                         if (word.charAt(i) == word2.charAt(j)) {
