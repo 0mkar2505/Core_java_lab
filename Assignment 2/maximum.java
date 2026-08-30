@@ -1,5 +1,5 @@
 import java.util.Scanner;
-class maximum{
+class maxi{
     public static int findMax(int a[]) {
         int max = a[0];
         for (int i = 1; i < a.length; i++) {
@@ -30,8 +30,8 @@ class mymain2{
                 }
             }
             System.out.println("}");
-            int max = maximum.findMax(a);
-            System.out.println("Maximum Value in set " + j + ": " + max);
+            int max = maxi.findMax(a);
+            System.out.println("maxi Value in set " + j + ": " + max);
         }
         sc.close();
     }
