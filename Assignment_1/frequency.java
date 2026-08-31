@@ -1,5 +1,8 @@
+package Java_lab.Assignment_1;
+
 import java.util.Scanner;
-public class frequency{
+
+public class frequency {
     @SuppressWarnings("ConvertToTryWithResources")
     public static void main(String args[]) {
         Scanner sc = new Scanner(System.in);
