@@ -1,3 +1,5 @@
+package Core_java_lab.Assignment_1;
+
 import java.util.Scanner;
 
 public class anagram {
