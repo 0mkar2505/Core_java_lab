@@ -1,7 +1,4 @@
-package Java_lab.Assignment_2;
-
 import java.util.Scanner;
-
 class maxi {
     public static int findMax(int a[]) {
         int max = a[0];

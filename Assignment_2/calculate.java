@@ -1,5 +1,3 @@
-package Java_lab.Assignment_2;
-
 class rhombus {
     double d1, d2, side;
 

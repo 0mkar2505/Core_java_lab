@@ -1,4 +1,3 @@
-package Java_lab.Assignment_2;
 
 import java.util.Scanner;
 

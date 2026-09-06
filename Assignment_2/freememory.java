@@ -1,5 +1,3 @@
-package Java_lab.Assignment_2;
-
 class gcTest {
     static {
         System.out.println("Initialize");

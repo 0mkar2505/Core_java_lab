@@ -1,5 +1,3 @@
-package Java_lab.Assignment_2;
-
 class garbagedemo {
 
     public static void main(String args[]) {

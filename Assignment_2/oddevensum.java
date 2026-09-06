@@ -1,5 +1,3 @@
-package Java_lab.Assignment_2;
-
 import java.util.Scanner;
 
 class sum {
@@ -24,7 +22,7 @@ class sum {
     }
 }
 
-class mymain4 {
+class mymain4{
     public static void main(String args[]) {
         Scanner sc = new Scanner(System.in);
         int input;
