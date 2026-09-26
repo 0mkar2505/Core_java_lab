@@ -48,8 +48,12 @@ class myMain5 {
             System.out.print("Enter Year: ");
             int Year = sc.nextInt();
             sc.nextLine();
+            MyDate date = new MyDate(Day, Month, Year);
+            date.Confirm();
         } catch (InvalidDayException | InvalidMonthException e) {
-
+            System.err.println("Error: " + e.getMessage());
+        } catch (Exception e){
+            System.err.println("Exception e.");
         }
     }
 }
