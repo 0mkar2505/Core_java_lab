@@ -37,9 +37,6 @@ class myMain7 {
             else if (op.equals("/")) {
                 result = a / b;
             }
-            else if (op.equals("%")) {
-                result = a % b;
-            }
             else {
                 throw new InvalidOperatorException(
                     "Invalid Operator Exception"
