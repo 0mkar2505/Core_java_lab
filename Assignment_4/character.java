@@ -15,20 +15,19 @@ class ExitException extends Exception {
 }
 class myMain8 {
     public static void main(String[] args) {
-
         try {
             if (args.length < 1) {
                 throw new BlankException("Blank Character given");
             }
-            String input = args[0];
-            if (input.equalsIgnoreCase("X")) {
+            String input = args[0].toUpperCase();
+            if (input.equals("X")) {
                 throw new ExitException("Exit Character given");
             }
-            if (input.equalsIgnoreCase("A") ||
-                input.equalsIgnoreCase("E") ||
-                input.equalsIgnoreCase("I") ||
-                input.equalsIgnoreCase("O") ||
-                input.equalsIgnoreCase("U")) {
+            if (input.equals("A") ||
+                input.equals("E") ||
+                input.equals("I") ||
+                input.equals("O") ||
+                input.equals("U")) {
                 throw new VowelException("Vowel Character given");
             }
             System.out.println("Valid Character given");
