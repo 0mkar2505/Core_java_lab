@@ -1,35 +1,50 @@
 import java.util.Scanner;
 
-class Payroll {
-    public static void main(String[] args) {
+interface NetPayCalculation {
+    void grossPayCalculation();
+    void taxCalculation();
+    float netPayCalculation();
+}
 
+class Employee implements NetPayCalculation {
+    int empId;
+    String name;
+    float basic, hra, da, ta, grossSalary;
+    float pf, professionalTax, totalDeduction, netSalary;
+
+    void getData() {
         Scanner sc = new Scanner(System.in);
 
         System.out.print("Enter Employee ID: ");
-        int empId = sc.nextInt();
-
-        sc.nextLine(); 
+        empId = sc.nextInt();
+        sc.nextLine();
 
         System.out.print("Enter Employee Name: ");
-        String name = sc.nextLine();
+        name = sc.nextLine();
 
         System.out.print("Enter Basic Salary: ");
-        double basic = sc.nextDouble();
+        basic = sc.nextFloat();
+    }
 
-        double hra = basic * 0.20;       
-        double da = basic * 0.10;        
-        double ta = basic * 0.05;        
+    public void grossPayCalculation() {
+        hra = basic * 0.20f;
+        da = basic * 0.10f;
+        ta = basic * 0.05f;
+        grossSalary = basic + hra + da + ta;
+    }
 
-        double grossSalary = basic + hra + da + ta;
+    public void taxCalculation() {
+        pf = basic * 0.12f;
+        professionalTax = 200;
+        totalDeduction = pf + professionalTax;
+    }
 
-        double pf = basic * 0.12;     
-        double professionalTax = 200; 
+    public float netPayCalculation() {
+        netSalary = grossSalary - totalDeduction;
+        return netSalary;
+    }
 
-        double totalDeduction = pf + professionalTax;
-
-        double netSalary = grossSalary - totalDeduction;
-
-        // Payslip
+    void display_details() {
         System.out.println("\n");
         System.out.println("======================================================");
         System.out.println("                  EMPLOYEE PAYSLIP");
@@ -63,7 +78,17 @@ class Payroll {
         System.out.println("======================================================");
         System.out.printf("%-25s %15.2f%n", "NET SALARY", netSalary);
         System.out.println("======================================================");
+    }
+}
 
-        sc.close();
+class Payroll {
+    public static void main(String[] args) {
+        Employee e = new Employee();
+
+        e.getData();
+        e.grossPayCalculation();
+        e.taxCalculation();
+        e.netPayCalculation();
+        e.display_details();
     }
 }

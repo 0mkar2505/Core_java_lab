@@ -1,5 +1,4 @@
 import java.util.Scanner;
-
 class InvalidCharacterException extends Exception {
     public InvalidCharacterException(String message) {
         super(message);
@@ -7,7 +6,6 @@ class InvalidCharacterException extends Exception {
 }
 class Colour {
     public String character;
-
     public Colour(String character) throws InvalidCharacterException {
         if (!character.equalsIgnoreCase("V") &&
             !character.equalsIgnoreCase("I") &&
@@ -16,29 +14,23 @@ class Colour {
             !character.equalsIgnoreCase("Y") &&
             !character.equalsIgnoreCase("O") &&
             !character.equalsIgnoreCase("R")) {
-
             throw new InvalidCharacterException("Character not in Rainbow");
         }
-
         this.character = character;
     }
     public void displayColour() {
-        if (character.equalsIgnoreCase("V"))
-            System.out.println("Violet");
-        else if (character.equalsIgnoreCase("I"))
-            System.out.println("Indigo");
-        else if (character.equalsIgnoreCase("B"))
-            System.out.println("Blue");
-        else if (character.equalsIgnoreCase("G"))
-            System.out.println("Green");
-        else if (character.equalsIgnoreCase("Y"))
-            System.out.println("Yellow");
-        else if (character.equalsIgnoreCase("O"))
-            System.out.println("Orange");
-        else if (character.equalsIgnoreCase("R"))
-            System.out.println("Red");
+        switch (character.toUpperCase()) {
+            case "V" -> System.out.println("Violet");
+            case "I" -> System.out.println("Indigo");
+            case "B" -> System.out.println("Blue");
+            case "G" -> System.out.println("Green");
+            case "Y" -> System.out.println("Yellow");
+            case "O" -> System.out.println("Orange");
+            case "R" -> System.out.println("Red");
+        }
     }
 }
+
 class myMain6 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
